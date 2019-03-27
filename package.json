@@ -13,8 +13,10 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
+		"prepublish": "safe-publish-latest",
 		"pretest": "npm run --silent lint",
 		"test": "npm run --silent tests-only",
+		"posttest": "npx aud",
 		"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module && npm run --silent tests:es5",
 		"tests:es5": "npm run --silent test:promise-shimmed",
 		"test:shimmed": "node test/shimmed.js",
@@ -58,6 +60,7 @@
 		"@ljharb/eslint-config": "^13.1.1",
 		"es6-shim": "^0.35.5",
 		"eslint": "^5.15.3",
+		"safe-publish-latest": "^1.1.2",
 		"tape": "^4.10.1"
 	}
 }
