@@ -13,7 +13,13 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "npm run --silent tests-only",
+		"tests-only": "es-shim-api --bound && npm run --silent test:shimmed && npm run --silent test:module && npm run --silent tests:es5",
+		"tests:es5": "npm run --silent test:promise-shimmed",
+		"test:shimmed": "node test/shimmed.js",
+		"test:module": "node test/index.js",
+		"test:promise-shimmed": "node test/promise-shimmed.js",
+		"test:native": "node --harmony-promise-finally test/native"
 	},
 	"repository": {
 		"type": "git",
@@ -39,5 +45,15 @@
 	"homepage": "https://github.com/ljharb/promise.allsettled#readme",
 	"engines": {
 		"node": ">= 0.4"
+	},
+	"dependencies": {
+		"define-properties": "^1.1.3",
+		"es-abstract": "^1.13.0",
+		"function-bind": "^1.1.1"
+	},
+	"devDependencies": {
+		"@es-shims/api": "^2.1.2",
+		"es6-shim": "^0.35.5",
+		"tape": "^4.10.1"
 	}
 }
