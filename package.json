@@ -23,7 +23,8 @@
 		"test:module": "node test/index.js",
 		"test:promise-shimmed": "node test/promise-shimmed.js",
 		"test:native": "node --harmony-promise-finally test/native",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"coverage": "covert test/*.js"
 	},
 	"repository": {
 		"type": "git",
