@@ -59,3 +59,8 @@ typings/
 
 # next.js build output
 .next
+
+# Only apps should have lockfiles
+npm-shrinkwrap.json
+package-lock.json
+yarn.lock
