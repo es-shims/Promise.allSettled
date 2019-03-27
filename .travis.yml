@@ -10,12 +10,6 @@ node_js:
   - "6.17"
   - "5.12"
   - "4.9"
-  - "iojs-v3.3"
-  - "iojs-v2.5"
-  - "iojs-v1.8"
-  - "0.12"
-  - "0.10"
-  - "0.8"
 before_install:
   - 'case "${TRAVIS_NODE_VERSION}" in 0.*) export NPM_CONFIG_STRICT_SSL=false ;; esac'
   - 'nvm install-latest-npm'
@@ -26,6 +20,8 @@ script:
   - 'if [ -n "${POSTTEST-}" ]; then npm run posttest ; fi'
   - 'if [ -n "${COVERAGE-}" ]; then npm run coverage ; fi'
   - 'if [ -n "${TEST-}" ]; then npm run tests-only ; fi'
+  - 'if [ -n "${ES5-}" ]; then npm run tests:es5 ; fi'
+  - 'if [ -n "${NATIVE-}" ]; then npm run test:native ; fi'
 sudo: false
 env:
   - TEST=true
@@ -36,6 +32,10 @@ matrix:
       env: PRETEST=true
     - node_js: "lts/*"
       env: POSTTEST=true
+    - node_js: "0.10"
+      env: ES5=true
+    - node_js: "12"
+      env: NATIVE=true ALLOW_FAILURE=true
     - node_js: "11.11"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "11.10"
@@ -238,11 +238,15 @@ matrix:
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "4.0"
       env: TEST=true ALLOW_FAILURE=true
+    - node_js: "iojs-v3.3"
+      env: TEST=true ALLOW_FAILURE=true
     - node_js: "iojs-v3.2"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "iojs-v3.1"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "iojs-v3.0"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "iojs-v2.5"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "iojs-v2.4"
       env: TEST=true ALLOW_FAILURE=true
@@ -253,6 +257,8 @@ matrix:
     - node_js: "iojs-v2.1"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "iojs-v2.0"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "iojs-v1.8"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "iojs-v1.7"
       env: TEST=true ALLOW_FAILURE=true
@@ -270,9 +276,13 @@ matrix:
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "iojs-v1.0"
       env: TEST=true ALLOW_FAILURE=true
+    - node_js: "0.12"
+      env: TEST=true ALLOW_FAILURE=true
     - node_js: "0.11"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "0.9"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "0.8"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "0.6"
       env: TEST=true ALLOW_FAILURE=true
@@ -281,4 +291,4 @@ matrix:
   allow_failures:
     - os: osx
     - env: TEST=true ALLOW_FAILURE=true
-    - env: COVERAGE=true
+    - env: NATIVE=true ALLOW_FAILURE=true
