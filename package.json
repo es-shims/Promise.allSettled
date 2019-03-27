@@ -1,0 +1,43 @@
+{
+	"name": "promise.allsettled",
+	"version": "0.0.0",
+	"author": "Jordan Harband",
+	"contributors": [
+		{
+			"name": "Jordan Harband",
+			"email": "ljharb@gmail.com",
+			"url": "http://ljharb.codes"
+		}
+	],
+	"description": "ES Proposal spec-compliant shim for Promise.allSettled",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ljharb/Promise.allSettled.git"
+	},
+	"keywords": [
+		"Promise",
+		"promises",
+		"allsettled",
+		"settled",
+		"fulfilled",
+		"resolved",
+		"rejected",
+		"promise.allsettled",
+		"shim",
+		"polyfill",
+		"es-shim",
+		"API"
+	],
+	"bugs": {
+		"url": "https://github.com/ljharb/promise.allsettled/issues"
+	},
+	"homepage": "https://github.com/ljharb/promise.allsettled#readme",
+	"engines": {
+		"node": ">= 0.4"
+	}
+}
