@@ -7,6 +7,11 @@
 			"name": "Jordan Harband",
 			"email": "ljharb@gmail.com",
 			"url": "http://ljharb.codes"
+		},
+		{
+			"name": "Martin Jurča",
+			"email": "mjurca@centrum.cz",
+			"url": "https://github.com/jurca"
 		}
 	],
 	"description": "ES Proposal spec-compliant shim for Promise.allSettled",
