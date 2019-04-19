@@ -12,7 +12,7 @@
 		"noEmit": true,
 		"forceConsistentCasingInFileNames": true
 	},
-	"files": [
+	"include": [
 		"**/*.d.ts"
 	]
 }
