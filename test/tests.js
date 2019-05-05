@@ -81,6 +81,17 @@ module.exports = function (allSettled, t) {
 		});
 	});
 
+	t.test('poisoned .then', function (st) {
+		st.plan(1);
+		var promise = new Promise(function () {});
+		promise.then = function () { throw new EvalError(); };
+		allSettled([promise]).then(function () {
+			st.fail('should not reach here');
+		}, function (reason) {
+			st.equal(reason instanceof EvalError, true, 'expected error was thrown');
+		});
+	});
+
 	var Subclass = (function () {
 		try {
 			// eslint-disable-next-line no-new-func

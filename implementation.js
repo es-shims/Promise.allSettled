@@ -9,6 +9,7 @@ var getIntrinsic = require('es-abstract/GetIntrinsic');
 var bind = require('function-bind');
 
 var all = bind.call(Function.call, getIntrinsic('%Promise_all%'));
+var reject = bind.call(Function.call, getIntrinsic('%Promise_reject%'));
 
 module.exports = function allSettled(iterable) {
 	var C = this;
@@ -23,6 +24,10 @@ module.exports = function allSettled(iterable) {
 			return { status: 'rejected', reason: reason };
 		};
 		var itemPromise = ES.PromiseResolve(C, item);
-		return itemPromise.then(onFulfill, onReject);
+		try {
+			return itemPromise.then(onFulfill, onReject);
+		} catch (e) {
+			return reject(C, e);
+		}
 	}));
 };
