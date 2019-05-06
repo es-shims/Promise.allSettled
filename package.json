@@ -60,7 +60,7 @@
 		"@es-shims/api": "^2.1.2",
 		"@ljharb/eslint-config": "^13.1.1",
 		"es6-shim": "^0.35.5",
-		"eslint": "^5.15.3",
+		"eslint": "^5.16.0",
 		"safe-publish-latest": "^1.1.2",
 		"tape": "^4.10.1"
 	}
