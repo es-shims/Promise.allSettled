@@ -2,7 +2,8 @@ language: node_js
 os:
  - linux
 node_js:
-  - "11.12"
+  - "12.1"
+  - "11.15"
   - "10.15"
   - "9.11"
   - "8.15"
@@ -36,6 +37,14 @@ matrix:
       env: ES5=true
     - node_js: "12"
       env: NATIVE=true ALLOW_FAILURE=true
+    - node_js: "12.0"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "11.14"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "11.13"
+      env: TEST=true ALLOW_FAILURE=true
+    - node_js: "11.12"
+      env: TEST=true ALLOW_FAILURE=true
     - node_js: "11.11"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "11.10"
@@ -237,56 +246,6 @@ matrix:
     - node_js: "4.1"
       env: TEST=true ALLOW_FAILURE=true
     - node_js: "4.0"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v3.3"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v3.2"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v3.1"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v3.0"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v2.5"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v2.4"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v2.3"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v2.2"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v2.1"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v2.0"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.8"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.7"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.6"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.5"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.4"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.3"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.2"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.1"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "iojs-v1.0"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "0.12"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "0.11"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "0.9"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "0.8"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "0.6"
-      env: TEST=true ALLOW_FAILURE=true
-    - node_js: "0.4"
       env: TEST=true ALLOW_FAILURE=true
   allow_failures:
     - os: osx
