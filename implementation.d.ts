@@ -1,14 +1,5 @@
-interface PromiseResolution<T> {
-	status: 'fulfilled';
-	value: T;
-}
+import {PromiseRejection, PromiseResolution, PromiseResult} from './types';
 
-interface PromiseRejection<E> {
-	status: 'rejected';
-	reason: E;
-}
-
-type PromiseResult<T, E> = PromiseResolution<T> | PromiseRejection<E>;
 type PromiseTuple<T extends [unknown, ...unknown[]]> = {[P in keyof T]: Promise<T[P]>};
 type PromiseResultTuple<T extends [unknown, ...unknown[]]> = {[P in keyof T]: PromiseResult<T[P], unknown>};
 
