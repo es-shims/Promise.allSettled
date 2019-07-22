@@ -28,7 +28,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/ljharb/Promise.allSettled.git"
+		"url": "git://github.com/es-shims/Promise.allSettled.git"
 	},
 	"keywords": [
 		"Promise",
@@ -45,9 +45,9 @@
 		"API"
 	],
 	"bugs": {
-		"url": "https://github.com/ljharb/promise.allsettled/issues"
+		"url": "https://github.com/es-shims/promise.allsettled/issues"
 	},
-	"homepage": "https://github.com/ljharb/promise.allsettled#readme",
+	"homepage": "https://github.com/es-shims/promise.allsettled#readme",
 	"engines": {
 		"node": ">= 0.4"
 	},

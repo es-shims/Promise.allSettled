@@ -41,13 +41,13 @@ Promise.allSettled([resolved, rejected]).then(function (results) {
 Simply clone the repo, `npm install`, and run `npm test`
 
 [package-url]: https://npmjs.com/package/promise.allsettled
-[npm-version-svg]: http://versionbadg.es/ljharb/Promise.allSettled.svg
-[travis-svg]: https://travis-ci.org/ljharb/Promise.allSettled.svg
-[travis-url]: https://travis-ci.org/ljharb/Promise.allSettled
-[deps-svg]: https://david-dm.org/ljharb/Promise.allSettled.svg
-[deps-url]: https://david-dm.org/ljharb/Promise.allSettled
-[dev-deps-svg]: https://david-dm.org/ljharb/Promise.allSettled/dev-status.svg
-[dev-deps-url]: https://david-dm.org/ljharb/Promise.allSettled#info=devDependencies
+[npm-version-svg]: http://versionbadg.es/es-shims/Promise.allSettled.svg
+[travis-svg]: https://travis-ci.org/es-shims/Promise.allSettled.svg
+[travis-url]: https://travis-ci.org/es-shims/Promise.allSettled
+[deps-svg]: https://david-dm.org/es-shims/Promise.allSettled.svg
+[deps-url]: https://david-dm.org/es-shims/Promise.allSettled
+[dev-deps-svg]: https://david-dm.org/es-shims/Promise.allSettled/dev-status.svg
+[dev-deps-url]: https://david-dm.org/es-shims/Promise.allSettled#info=devDependencies
 [npm-badge-png]: https://nodei.co/npm/promise.allsettled.png?downloads=true&stars=true
 [license-image]: http://img.shields.io/npm/l/promise.allsettled.svg
 [license-url]: LICENSE
