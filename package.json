@@ -63,6 +63,6 @@
 		"eslint": "^5.16.0",
 		"functions-have-names": "^1.1.0",
 		"safe-publish-latest": "^1.1.2",
-		"tape": "^4.10.1"
+		"tape": "^4.11.0"
 	}
 }
