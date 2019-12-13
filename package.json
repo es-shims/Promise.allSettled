@@ -61,11 +61,11 @@
 	},
 	"devDependencies": {
 		"@es-shims/api": "^2.1.2",
-		"@ljharb/eslint-config": "^13.1.1",
+		"@ljharb/eslint-config": "^15.0.2",
 		"es6-shim": "^0.35.5",
-		"eslint": "^5.16.0",
-		"functions-have-names": "^1.1.0",
-		"safe-publish-latest": "^1.1.2",
+		"eslint": "^6.7.2",
+		"functions-have-names": "^1.2.0",
+		"safe-publish-latest": "^1.1.4",
 		"tape": "^4.11.0"
 	}
 }
