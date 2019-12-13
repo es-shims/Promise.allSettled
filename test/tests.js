@@ -1,5 +1,9 @@
 'use strict';
 
+if (typeof process !== 'undefined') {
+	process.on('unhandledRejection', function () {});
+}
+
 var assertArray = function (t, value, length, assertType) {
 	t.ok(Array.isArray(value), 'value is an array');
 	t.equal(value.length, length, 'length is ' + length);
