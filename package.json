@@ -55,9 +55,11 @@
 		"node": ">= 0.4"
 	},
 	"dependencies": {
+		"array.prototype.map": "^1.0.1",
 		"define-properties": "^1.1.3",
 		"es-abstract": "^1.13.0",
-		"function-bind": "^1.1.1"
+		"function-bind": "^1.1.1",
+		"iterate-value": "^1.0.0"
 	},
 	"devDependencies": {
 		"@es-shims/api": "^2.1.2",
