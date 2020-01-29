@@ -8,11 +8,10 @@ var PromiseResolve = require('es-abstract/2019/PromiseResolve');
 var Type = require('es-abstract/2019/Type');
 var iterate = require('iterate-value');
 var map = require('array.prototype.map');
-var getIntrinsic = require('es-abstract/GetIntrinsic');
-var bind = require('function-bind');
+var callBound = require('es-abstract/helpers/callBound');
 
-var all = bind.call(Function.call, getIntrinsic('%Promise_all%'));
-var reject = bind.call(Function.call, getIntrinsic('%Promise_reject%'));
+var all = callBound('Promise.all');
+var reject = callBound('Promise.reject');
 
 module.exports = function allSettled(iterable) {
 	var C = this;

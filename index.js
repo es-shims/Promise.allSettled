@@ -1,6 +1,6 @@
 'use strict';
 
-var bind = require('function-bind');
+var callBind = require('es-abstract/helpers/callBind');
 var define = require('define-properties');
 
 var requirePromise = require('./requirePromise');
@@ -9,7 +9,7 @@ var getPolyfill = require('./polyfill');
 var shim = require('./shim');
 
 requirePromise();
-var bound = bind.call(Function.call, getPolyfill());
+var bound = callBind(getPolyfill());
 
 var rebindable = function allSettled(iterable) {
 	// eslint-disable-next-line no-invalid-this
