@@ -18,16 +18,12 @@
 	"scripts": {
 		"prepublish": "safe-publish-latest",
 		"pretest": "npm run --silent lint && es-shim-api --bound",
-		"test": "npm run --silent tests-only",
+		"test": "npm run --silent tests-only && npm run test:promise-shimmed",
 		"posttest": "npx aud --production",
-		"tests-only": "npm run --silent test:shimmed && npm run --silent test:module && npm run --silent tests:es5",
-		"tests:es5": "npm run --silent test:promise-shimmed",
-		"test:shimmed": "node test/shimmed.js",
-		"test:module": "node test/index.js",
-		"test:promise-shimmed": "node test/promise-shimmed.js",
-		"test:native": "node --harmony-promise-finally test/native",
-		"lint": "eslint .",
-		"coverage": "covert test/*.js"
+		"tests-only": "nyc tape test/{implementation,index,shimmed}.js",
+		"test:promise-shimmed": "nyc node test/promise-shimmed",
+		"test:native": "nyc node --harmony-promise-finally test/native",
+		"lint": "eslint ."
 	},
 	"repository": {
 		"type": "git",
@@ -64,9 +60,11 @@
 		"@es-shims/api": "^2.1.2",
 		"@ljharb/eslint-config": "^17.1.0",
 		"aud": "^1.1.2",
+		"call-bind": "^1.0.0",
 		"es6-shim": "^0.35.5",
 		"eslint": "^7.1.0",
 		"functions-have-names": "^1.2.1",
+		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
 		"tape": "^5.0.1"
 	}

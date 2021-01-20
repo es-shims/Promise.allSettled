@@ -1,7 +1,6 @@
 'use strict';
 
-var allSettled = require('../');
-allSettled.shim();
+require('../auto');
 
 var test = require('tape');
 
