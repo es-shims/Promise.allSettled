@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.3](https://github.com/es-shims/Promise.allSettled/compare/v1.0.2...v1.0.3) - 2021-01-20
+
+### Commits
+
+- [Tests] migrate tests to Github Actions [`a066121`](https://github.com/es-shims/Promise.allSettled/commit/a0661218570a7815a5328e36ee5b2378e16820d2)
+- [meta] use `auto-changelog` [`7b27067`](https://github.com/es-shims/Promise.allSettled/commit/7b270677baf74ddfedcf4869b869b44e89d30a28)
+- [meta] do not publish github action workflow files [`aae74fd`](https://github.com/es-shims/Promise.allSettled/commit/aae74fd7c0a1abf9a9609d7fcd9755b3a8d2a364)
+- [Tests] run `nyc` on all tests; use `tape` runner; add implementation tests [`fbd8198`](https://github.com/es-shims/Promise.allSettled/commit/fbd81984b88abb6fc2089e15090a4861f24642a8)
+- [Deps] update `array.prototype.map`, `es-abstract`; add `call-bind` [`424f760`](https://github.com/es-shims/Promise.allSettled/commit/424f7606f6ec04aefd36e61dcd83ba1a96d04bbb)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `call-bind`, `functions-have-names`, `tape` [`47c5df1`](https://github.com/es-shims/Promise.allSettled/commit/47c5df1ddb55ae59bf57dabf62b6030a92a2adc4)
+- [actions] add "Allow Edits" workflow [`d931b6c`](https://github.com/es-shims/Promise.allSettled/commit/d931b6c00bab078e5562b7392374d48de9ffc1cd)
+- [Refactor] use es-abstract’s `callBind` instead of `function-bind` directly [`09c25e8`](https://github.com/es-shims/Promise.allSettled/commit/09c25e81af2050ade7d4be35a522753422e7843a)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `functions-have-names`, `tape`; add `aud` [`03aedb0`](https://github.com/es-shims/Promise.allSettled/commit/03aedb0e6365f0ea6f76a373148f3e1ed2c6e8a2)
+- [Deps] update `array.prototype.map`, `es-abstract`, `iterate-value` [`f28e1aa`](https://github.com/es-shims/Promise.allSettled/commit/f28e1aa6a83d201de8a81862890c713f60c1680c)
+- [Tests] test in older nodes that 3e873f7 now supports [`5feffee`](https://github.com/es-shims/Promise.allSettled/commit/5feffeecb8d9a535cd24f6563023f841a455ebee)
+- [actions] switch Automatic Rebase workflow to `pull_request_target` event [`b30a268`](https://github.com/es-shims/Promise.allSettled/commit/b30a2686337efa13454ce754c32287b4aec11bdf)
+- [meta] only run `aud` on prod deps [`bf97e5f`](https://github.com/es-shims/Promise.allSettled/commit/bf97e5fad6e5ab554ec8780d1a5f0d955dbce4e4)
+- [Deps] update `es-abstract` [`6a6ae55`](https://github.com/es-shims/Promise.allSettled/commit/6a6ae556058aba575b8cd335618f846b3c1fe8c8)
+- [Deps] update `iterate-value` [`13507f3`](https://github.com/es-shims/Promise.allSettled/commit/13507f3b7b87de8b26ea3cd0d40949c8c9747f77)
+
 ## [v1.0.2](https://github.com/es-shims/Promise.allSettled/compare/v1.0.1...v1.0.2) - 2019-12-13
 
 ### Commits
