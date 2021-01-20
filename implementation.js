@@ -4,11 +4,11 @@ var requirePromise = require('./requirePromise');
 
 requirePromise();
 
-var PromiseResolve = require('es-abstract/2019/PromiseResolve');
-var Type = require('es-abstract/2019/Type');
+var PromiseResolve = require('es-abstract/2020/PromiseResolve');
+var Type = require('es-abstract/2020/Type');
 var iterate = require('iterate-value');
 var map = require('array.prototype.map');
-var callBound = require('es-abstract/helpers/callBound');
+var callBound = require('call-bind/callBound');
 
 var all = callBound('Promise.all');
 var reject = callBound('Promise.reject');
