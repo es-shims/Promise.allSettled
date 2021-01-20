@@ -1,21 +1,49 @@
-v1.0.2 / 2019-12-13
-=================
-  * [Refactor] use split-up `es-abstract` (44% bundle size decrease)
-  * [Fix] no longer require `Array.from`; works in older envs
-  * [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `functions-have-names`, `safe-publish-latest`, `tape`
-  * [meta] add `funding` field
-  * [meta] move repo to es-shims org
-  * [Tests] temporarily comment out failing test in node 12+
-  * [Tests] suppress unhandled rejection warnings
-  * [Tests] skip "`undefined` receiver" test
-  * [Tests] use shared travis-ci configs
-  * [Tests] use `functions-have-names`
-  * [actions] add automatic rebasing / merge commit blocking
+# Changelog
 
-v1.0.1 / 2019-05-06
-=================
-  * [Fix] when a promise has a poisoned `.then` method, reject the overarching promise (#1)
+All notable changes to this project will be documented in this file.
 
-v1.0.0 / 2019-03-27
-=================
-  * Initial release.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [v1.0.2](https://github.com/es-shims/Promise.allSettled/compare/v1.0.1...v1.0.2) - 2019-12-13
+
+### Commits
+
+- [Tests] use shared travis-ci configs [`3a5a379`](https://github.com/es-shims/Promise.allSettled/commit/3a5a379ad6da1a7fe988e8e1eb708be4f7abb008)
+- [meta] move repo to es-shims org [`240a87c`](https://github.com/es-shims/Promise.allSettled/commit/240a87c480ab7a3119c192476c6317d5f5ce59e2)
+- [Fix] no longer require `Array.from`; works in older envs [`3e873f7`](https://github.com/es-shims/Promise.allSettled/commit/3e873f78e15b275d6e10db12ac6cde1716be2f60)
+- [actions] add automatic rebasing / merge commit blocking [`4ab52ef`](https://github.com/es-shims/Promise.allSettled/commit/4ab52efa9466c535cd15a1bcb54b3250c989b174)
+- [Tests] skip "`undefined` receiver" test [`9612591`](https://github.com/es-shims/Promise.allSettled/commit/96125915f35386940fce8eb52331346ffe3b45d6)
+- [Refactor] use split-up `es-abstract` (44% bundle size decrease) [`ed49521`](https://github.com/es-shims/Promise.allSettled/commit/ed49521b2f03a4a63ef0e15a017dc973217d03bb)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `functions-have-names`, `safe-publish-latest` [`7f97708`](https://github.com/es-shims/Promise.allSettled/commit/7f977086e2f685d29d1ae821b4083c9b4e1256d8)
+- [Tests] temporarily comment out failing test in node 12+ [`275507f`](https://github.com/es-shims/Promise.allSettled/commit/275507f89a3c672acd867cbe7432c0c08f0abef9)
+- [meta] add `funding` field [`96b75aa`](https://github.com/es-shims/Promise.allSettled/commit/96b75aab5a8bb3586303baafe462b4b4114fb2da)
+- [Tests] suppress unhandled rejection warnings [`8ee2263`](https://github.com/es-shims/Promise.allSettled/commit/8ee226357bb92417ac5d596abaa86cc600c97aa1)
+- [Tests] use `functions-have-names` [`43ed9ca`](https://github.com/es-shims/Promise.allSettled/commit/43ed9ca63e41795c8f96764da33dee3d11fa533a)
+- [Dev Deps] update `tape` [`df12368`](https://github.com/es-shims/Promise.allSettled/commit/df123681fd26b8b18d0f89aa56e57d927fd63bc6)
+
+## [v1.0.1](https://github.com/es-shims/Promise.allSettled/compare/v1.0.0...v1.0.1) - 2019-05-06
+
+### Fixed
+
+- [Fix] when a promise has a poisoned `.then` method, reject the overarching promise [`#1`](https://github.com/es-shims/Promise.allSettled/issues/1)
+
+### Commits
+
+- [Tests] up to `node` `v12.1`, `v11.15` [`4d76716`](https://github.com/es-shims/Promise.allSettled/commit/4d76716fc0a002af216962d177bd197688b27e1f)
+- [Dev Deps] update `eslint` [`fc23682`](https://github.com/es-shims/Promise.allSettled/commit/fc23682b807812ab5288d9a100b60f735f41f089)
+
+## v1.0.0 - 2019-03-27
+
+### Commits
+
+- [Tests] add `travis-ci` [`0201190`](https://github.com/es-shims/Promise.allSettled/commit/02011908060b52218b21b04c88d85fb521f09c93)
+- Initial tests [`1a519d1`](https://github.com/es-shims/Promise.allSettled/commit/1a519d1f7ae673a4b109baa81fa02fdd95bd5788)
+- Initial implementation [`562952d`](https://github.com/es-shims/Promise.allSettled/commit/562952d201c3d0c43b8549c6399cf56555125983)
+- Initial commit [`cee4c56`](https://github.com/es-shims/Promise.allSettled/commit/cee4c561deba91556b697d329149bfd9c32c7927)
+- readme [`60f133f`](https://github.com/es-shims/Promise.allSettled/commit/60f133f4b11d15b479b0c8d5de634005e4992ede)
+- package.json [`6b9cc53`](https://github.com/es-shims/Promise.allSettled/commit/6b9cc53e884da0847bebea738bfbb93d2993f060)
+- Require `Array.from`; fix tests [`53ff455`](https://github.com/es-shims/Promise.allSettled/commit/53ff455a67d06f86b250e4584d3de417c1937966)
+- [Tests] add `npm run lint` [`d61e9f7`](https://github.com/es-shims/Promise.allSettled/commit/d61e9f79ef7df73eb55caa95f552aea09559574e)
+- Only apps should have lockfiles [`cb2ea36`](https://github.com/es-shims/Promise.allSettled/commit/cb2ea3689931a5a4502e5f771347cff6919a0305)
+- [Tests] use `npx aud` for posttest, and `safe-publish-latest` for prepublish [`68995cd`](https://github.com/es-shims/Promise.allSettled/commit/68995cdf499a3d6e124c76e4e31c1daa55387c46)
