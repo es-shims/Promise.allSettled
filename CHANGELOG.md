@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.4](https://github.com/es-shims/Promise.allSettled/compare/v1.0.3...v1.0.4) - 2021-01-20
+
+### Commits
+
+- [Fix] properly call-bind `Promise.all` and `Promise.reject` [`1f90b0e`](https://github.com/es-shims/Promise.allSettled/commit/1f90b0efc3208486709391ffe1dd16b79ca214d4)
+
 ## [v1.0.3](https://github.com/es-shims/Promise.allSettled/compare/v1.0.2...v1.0.3) - 2021-01-20
 
 ### Commits

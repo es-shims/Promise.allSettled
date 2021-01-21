@@ -1,6 +1,6 @@
 {
 	"name": "promise.allsettled",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"author": "Jordan Harband <ljharb@gmail.com>",
 	"funding": {
 		"url": "https://github.com/sponsors/ljharb"
