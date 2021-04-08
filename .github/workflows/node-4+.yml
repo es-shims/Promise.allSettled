@@ -12,6 +12,7 @@ jobs:
       - uses: ljharb/actions/node/matrix@main
         id: set-matrix
         with:
+          versionsAsRoot: true
           preset: '>=4'
 
   latest:
@@ -20,7 +21,10 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      matrix: ${{ fromJson(needs.matrix.outputs.latest) }}
+      matrix:
+        node-version: ${{ fromJson(needs.matrix.outputs.latest) }}
+        include:
+          - node-version: 0.12
 
     steps:
       - uses: actions/checkout@v2
@@ -30,7 +34,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm run tests-only
       - uses: codecov/codecov-action@v1
-
+          
   minors:
     needs: [matrix, latest]
     name: 'non-latest minors'
@@ -39,7 +43,10 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      matrix: ${{ fromJson(needs.matrix.outputs.minors) }}
+      matrix:
+        node-version: ${{ fromJson(needs.matrix.outputs.minors) }}
+        include:
+          - node-version: 0.11
 
     steps:
       - uses: actions/checkout@v2
