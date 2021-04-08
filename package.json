@@ -16,7 +16,8 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"prepublish": "safe-publish-latest",
+		"prepublish": "not-in-publish || npm run prepublishOnly",
+		"prepublishOnly": "safe-publish-latest",
 		"pretest": "npm run --silent lint && es-shim-api --bound",
 		"test": "npm run --silent tests-only && npm run test:promise-shimmed",
 		"posttest": "npx aud --production",
