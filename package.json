@@ -62,16 +62,16 @@
 		"iterate-value": "^1.0.2"
 	},
 	"devDependencies": {
-		"@es-shims/api": "^2.1.2",
-		"@ljharb/eslint-config": "^17.5.1",
-		"aud": "^1.1.4",
-		"auto-changelog": "^2.2.1",
+		"@es-shims/api": "^2.2.2",
+		"@ljharb/eslint-config": "^18.0.0",
+		"aud": "^1.1.5",
+		"auto-changelog": "^2.3.0",
 		"es6-shim": "^0.35.6",
-		"eslint": "^7.23.0",
+		"eslint": "^7.32.0",
 		"functions-have-names": "^1.2.2",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.2.2"
+		"tape": "^5.3.1"
 	},
 	"auto-changelog": {
 		"output": "CHANGELOG.md",
