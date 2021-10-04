@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.5](https://github.com/es-shims/Promise.allSettled/compare/v1.0.4...v1.0.5) - 2021-10-03
+
+### Commits
+
+- [actions] use `node/install` instead of `node/run`; use `codecov` action [`7d77553`](https://github.com/es-shims/Promise.allSettled/commit/7d77553474ee8370a2fabdceaf07c86e89a989df)
+- [actions] partial revert of 7d77553474ee8370a2fabdceaf07c86e89a989df; fix promise-shimmed tests [`760421a`](https://github.com/es-shims/Promise.allSettled/commit/760421a9e6806655b85d3a757d49a4b1effbd4ea)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `@es-shims/api`, `aud`, `auto-changelog`, `tape` [`95ed131`](https://github.com/es-shims/Promise.allSettled/commit/95ed131ca0d15ecb6ec6c507ce43fdcc999f9380)
+- [Deps] update `array.prototype.map`, `es-abstract` [`2cb2b26`](https://github.com/es-shims/Promise.allSettled/commit/2cb2b26b45fe8875acf948a752cc021e367eec5d)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `tape` [`e0d6e23`](https://github.com/es-shims/Promise.allSettled/commit/e0d6e2317a068441b9b4b42a0f73cb844a6db05f)
+- [readme] add github actions/codecov badges [`3796b86`](https://github.com/es-shims/Promise.allSettled/commit/3796b86abcc116c870088ff990ad030737e380e4)
+- [actions] update workflows [`170c0a9`](https://github.com/es-shims/Promise.allSettled/commit/170c0a9a61bbc7099abeadabac62d922bdf384a1)
+- [Deps] update `es-abstract`, `get-intrinsic` [`a148f57`](https://github.com/es-shims/Promise.allSettled/commit/a148f5735a63810c4146aad515a252f245bd91ba)
+- [meta] use `prepublishOnly` script for npm 7+ [`b09d1ee`](https://github.com/es-shims/Promise.allSettled/commit/b09d1eece27d5ba08848998b79c6d0947d4803e4)
+
 ## [v1.0.4](https://github.com/es-shims/Promise.allSettled/compare/v1.0.3...v1.0.4) - 2021-01-20
 
 ### Commits
