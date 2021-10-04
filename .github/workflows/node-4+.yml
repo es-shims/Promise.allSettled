@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         node-version: ${{ fromJson(needs.matrix.outputs.latest) }}
         include:
@@ -34,7 +35,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm run tests-only
       - uses: codecov/codecov-action@v1
-          
+
   minors:
     needs: [matrix, latest]
     name: 'non-latest minors'
@@ -43,6 +44,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         node-version: ${{ fromJson(needs.matrix.outputs.minors) }}
         include:
