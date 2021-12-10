@@ -1,41 +1,18 @@
-name: 'Tests: node.js: shimmed Promise'
+name: 'Tests: node.js, promise-shimmed'
 
 on: [pull_request, push]
 
 jobs:
-  matrix:
-    runs-on: ubuntu-latest
-    outputs:
-      latest: ${{ steps.set-matrix.outputs.requireds }}
-      minors: ${{ steps.set-matrix.outputs.optionals }}
-    steps:
-      - uses: ljharb/actions/node/matrix@main
-        id: set-matrix
-        with:
-          type: majors
-          preset: '>= 1'
-
-  majors:
-    needs: [matrix]
-    name: 'majors, promise-shimmed tests'
-    continue-on-error: true
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix: ${{ fromJson(needs.matrix.outputs.latest) }}
-
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ljharb/actions/node/install@main
-        name: 'nvm install ${{ matrix.node-version }} && npm install'
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm run test:promise-shimmed
-      - uses: codecov/codecov-action@v2
+  tests:
+    uses: ljharb/actions/.github/workflows/node.yml@main
+    with:
+      range: '0.10 || 0.12 || >= 1'
+      type: majors
+      command: npm run test:promise-shimmed
 
   node:
     name: 'node, promise-shimmed tests'
-    needs: [majors]
+    needs: [tests]
     runs-on: ubuntu-latest
     steps:
       - run: 'echo tests completed'
